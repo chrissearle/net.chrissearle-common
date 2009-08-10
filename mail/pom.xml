@@ -10,7 +10,7 @@
         <version>17</version>
     </parent>
 
-    <groupId>net.chrissearle</groupId>
+    <groupId>net.chrissearle.common</groupId>
     <artifactId>simple-mail</artifactId>
     <packaging>pom</packaging>
     <version>1-SNAPSHOT</version>
