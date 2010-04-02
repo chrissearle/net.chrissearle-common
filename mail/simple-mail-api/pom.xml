@@ -10,7 +10,7 @@
 
     <groupId>net.chrissearle.common</groupId>
     <artifactId>simple-mail-api</artifactId>
-    <version>2</version>
+    <version>3-SNAPSHOT</version>
 
     <name>Simple email sending - API</name>
 </project>
