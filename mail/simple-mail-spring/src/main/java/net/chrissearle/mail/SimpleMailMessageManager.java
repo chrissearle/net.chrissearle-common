@@ -1,15 +1,16 @@
 package net.chrissearle.mail;
 
-import org.apache.log4j.Level;
-import org.apache.log4j.Logger;
 import org.springframework.mail.MailException;
 import org.springframework.mail.MailSender;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.stereotype.Service;
 
+import java.util.logging.Logger;
+import java.util.logging.Level;
+
 @Service
 public class SimpleMailMessageManager implements SimpleMailService {
-    Logger logger = Logger.getLogger(SimpleMailMessageManager.class);
+    Logger logger = Logger.getLogger(SimpleMailMessageManager.class.getName());
 
     private MailSender mailSender;
     private SimpleMailMessage mailTemplate;
@@ -41,8 +42,8 @@ public class SimpleMailMessageManager implements SimpleMailService {
             this.mailSender.send(msg);
         } catch (MailException ex) {
             // We log this - it's not supposed to show up to the user - but should show in the system logs
-            if (logger.isEnabledFor(Level.WARN)) {
-                logger.warn("Unable to send post mail", ex);
+            if (logger.isLoggable(Level.WARNING)) {
+                logger.warning("Unable to send post mail: " + ex.getMessage());
             }
         }
     }
