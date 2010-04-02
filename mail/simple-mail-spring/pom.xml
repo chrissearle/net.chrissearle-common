@@ -10,7 +10,7 @@
 
     <groupId>net.chrissearle.common</groupId>
     <artifactId>simple-mail-spring</artifactId>
-    <version>2-SNAPSHOT</version>
+    <version>2</version>
 
     <name>Simple email sending - spring implementation</name>
 
